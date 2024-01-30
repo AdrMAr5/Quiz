@@ -562,7 +562,7 @@ const useQuestions = (): question[] => {
                     text: 'disable logins from specified hosts'
                 }
             ],
-            correct: [option.a, option.d, option.e],
+            correct: [option.a, option.d, option.f],
             comment:
                 'Cisco IOS login enhancements provide increased security in three ways:\n- Implement delays between successive login attempts\n- Enable login shutdown if DoS attacks are suspected\n- Generate system-logging messages for login detection\nBanners and password authentication are disabled by default and must be enabled by command. Virtual login enhancements do not apply to console connections.'
         },
