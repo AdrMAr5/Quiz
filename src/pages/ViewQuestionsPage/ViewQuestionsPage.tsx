@@ -2,6 +2,7 @@ import PageLayout from '../../components/PageLayout';
 import PageHeader from '../../components/PageHeader';
 import useQuestions from './hooks/useQuestions';
 import {
+    Button,
     Card,
     CardContent,
     CardHeader,
@@ -20,6 +21,7 @@ import SelectInput from '@mui/material/Select/SelectInput';
 const ViewQuestionsPage = () => {
     const questions = useQuestions();
     const [chapter, setChapter] = useState(2);
+    const [showCorrect, setShowCorrect] = useState(false);
 
     const count2 = questions.filter((obj) => obj.chapter === 2).length;
     const count3 = questions.filter((obj) => obj.chapter === 3).length;
@@ -42,28 +44,38 @@ const ViewQuestionsPage = () => {
         <PageLayout>
             <>
                 <PageHeader heading="Pytania z bazy" />
-                <Select onChange={handleChange}>
+                <Select onChange={handleChange} defaultValue="2">
                     <MenuItem value={2}>2</MenuItem>
                     <MenuItem value={3}>3</MenuItem>
                     <MenuItem value={4}>4</MenuItem>
                     <MenuItem value={6}>6</MenuItem>
-                    <MenuItem value={8}>8</MenuItem>
                 </Select>
+                <Button onClick={() => setShowCorrect(!showCorrect)}>
+                    pokaż poprawne
+                </Button>
                 <Grid container rowGap={4} columns={1} maxWidth="60%">
-                    {questions.map((value) => {
-                        return value.chapter === chapter ? (
+                    {questions.map((question) => {
+                        return question.chapter === chapter ? (
                             <Grid xs={1}>
                                 <Card>
                                     <CardHeader
-                                        title={value.question}
+                                        title={question.question}
                                     ></CardHeader>
                                     <CardContent>
                                         <List>
-                                            {value.answers.map((v) => {
+                                            {question.answers.map((v) => {
                                                 return (
                                                     <Answer
                                                         option={v.option}
                                                         text={v.text}
+                                                        correct={
+                                                            question.correct.indexOf(
+                                                                v.option
+                                                            ) !== -1
+                                                        }
+                                                        showCorrect={
+                                                            showCorrect
+                                                        }
                                                     />
                                                 );
                                             })}

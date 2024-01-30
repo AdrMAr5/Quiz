@@ -1810,7 +1810,7 @@ const useQuestions = (): question[] => {
                 'BPDU guard immediately error-disables a port that receives a BPDU. This prevents rogue switches from being added to the network. BPDU guard should only be applied to all end-user ports.'
         },
         {
-            chapter: 5,
+            chapter: 6,
             question:
                 'What is the role of the Cisco NAC Manager in implementing a secure networking infrastructure?',
             answers: [
@@ -1836,7 +1836,7 @@ const useQuestions = (): question[] => {
                 'Cisco NAC authenticates users and assess the policy compliance of the device the user is using to connect to the network. The role of the Cisco NAC Manager is to define the security policies of user access and endpoint security policies.'
         },
         {
-            chapter: 5,
+            chapter: 6,
             question:
                 'What is the role of the Cisco NAC Server within the Cisco Secure Borderless Network Architecture?',
             answers: [
@@ -1862,7 +1862,7 @@ const useQuestions = (): question[] => {
                 'Cisco NAC is used in the Cisco Borderless Network Architecture to authenticate users and ensure user devices are compliant with security policies. The Cisco NAC server assesses and enforces security policy compliance.'
         },
         {
-            chapter: 5,
+            chapter: 6,
             question:
                 'What is the role of the Cisco NAC Guest Server within the Cisco Borderless Network architecture?',
             answers: [

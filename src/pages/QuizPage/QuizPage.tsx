@@ -62,10 +62,11 @@ const ViewQuestionsPage = () => {
                                     {questions[currentQuestion].answers.map(
                                         (v) => {
                                             return (
-                                                <Answer
-                                                    text={v.text}
-                                                    option={v.option}
-                                                />
+                                                <></>
+                                                // <Answer
+                                                //     text={v.text}
+                                                //     option={v.option}
+                                                // />
                                             );
                                         }
                                     )}
