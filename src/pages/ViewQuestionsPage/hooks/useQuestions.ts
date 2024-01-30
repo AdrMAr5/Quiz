@@ -301,7 +301,7 @@ const useQuestions = (): question[] => {
                     text: 'R1(config)# username admin Admin01pa55 encr md5\nR1(config)# line con 0\nR1(config-line)# login local'
                 }
             ],
-            correct: [option.c],
+            correct: [option.b],
             comment:
                 'To configure a user account with an encrypted password, the username secret command is used. The line con 0 command defines the console line as configured for login and the login local command tells the router to look in the local database for the user credentials.'
         },
