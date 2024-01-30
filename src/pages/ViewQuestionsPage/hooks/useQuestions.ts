@@ -907,7 +907,7 @@ const useQuestions = (): question[] => {
                     text: 'Utilization of transport layer protocols.'
                 }
             ],
-            correct: [option.b, option.d],
+            correct: [option.b, option.e],
             comment:
                 'Both TACACS+ and RADIUS protocols include separate authentication and authorization processes and password encryption.'
         },
