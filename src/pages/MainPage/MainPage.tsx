@@ -29,15 +29,17 @@ const MainPage = () => {
                     </Link>
                 </Grid>
                 <Grid item xs={1}>
-                    <Card sx={{ height: '100%' }}>
-                        <CardHeader title="Quiz" />
-                        <CardContent>
-                            <Typography>
-                                Przezczytaj pytanie i wybierz prawidłową
-                                odpowiedź
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                    <Link to="/quiz">
+                        <Card sx={{ height: '100%' }}>
+                            <CardHeader title="Quiz" />
+                            <CardContent>
+                                <Typography>
+                                    Przezczytaj pytanie i wybierz prawidłową
+                                    odpowiedź
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Link>
                 </Grid>
                 <Grid item xs={1}>
                     <Card sx={{ height: '100%' }}>
