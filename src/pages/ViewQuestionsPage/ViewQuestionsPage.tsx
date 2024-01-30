@@ -22,6 +22,7 @@ const ViewQuestionsPage = () => {
     const questions = useQuestions();
     const [chapter, setChapter] = useState(2);
     const [showCorrect, setShowCorrect] = useState(false);
+    const [showComment, setShowComment] = useState(false);
 
     const count2 = questions.filter((obj) => obj.chapter === 2).length;
     const count3 = questions.filter((obj) => obj.chapter === 3).length;
@@ -53,6 +54,9 @@ const ViewQuestionsPage = () => {
                 <Button onClick={() => setShowCorrect(!showCorrect)}>
                     pokaż poprawne
                 </Button>
+                <Button onClick={() => setShowComment(!showComment)}>
+                    pokaż wyjaśnienia
+                </Button>
                 <Grid container rowGap={4} columns={1} maxWidth="60%">
                     {questions.map((question) => {
                         return question.chapter === chapter ? (
@@ -79,6 +83,12 @@ const ViewQuestionsPage = () => {
                                                     />
                                                 );
                                             })}
+                                            {showComment ? (
+                                                <p>
+                                                    komentarz:{' '}
+                                                    {question.comment}
+                                                </p>
+                                            ) : null}
                                         </List>
                                     </CardContent>
                                 </Card>
