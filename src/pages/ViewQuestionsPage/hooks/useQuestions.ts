@@ -1153,7 +1153,7 @@ const useQuestions = (): question[] => {
                 { option: option.b, text: 'cannot filter unnecessary traffic' },
                 {
                     option: option.c,
-                    text: 'not as effective with UDP- or ICMP-based traffic*'
+                    text: 'not as effective with UDP- or ICMP-based traffic'
                 },
                 { option: option.d, text: 'poor log information' }
             ],
@@ -1168,7 +1168,7 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'echo request' },
                 { option: option.b, text: 'time-stamp request' },
-                { option: option.c, text: 'echo reply*' },
+                { option: option.c, text: 'echo reply' },
                 { option: option.d, text: 'time-stamp reply' },
                 { option: option.e, text: 'router advertisement' }
             ],
@@ -1183,7 +1183,7 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'ipv6 access-class ENG_ACL in' },
                 { option: option.b, text: 'ipv6 traffic-filter ENG_ACL out' },
-                { option: option.c, text: 'ipv6 traffic-filter ENG_ACL in*' },
+                { option: option.c, text: 'ipv6 traffic-filter ENG_ACL in' },
                 { option: option.d, text: 'ipv6 access-class ENG_ACL out' }
             ],
             correct: [option.c],
@@ -1197,7 +1197,7 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'permit udp 172.16.0.0 0.0.255.255 host 172.16.1.5 eq snmptrap*'
+                    text: 'permit udp 172.16.0.0 0.0.255.255 host 172.16.1.5 eq snmptrap'
                 },
                 {
                     option: option.b,
@@ -1226,7 +1226,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'web security appliance' },
                 { option: option.b, text: 'intrusion protection system' },
                 { option: option.c, text: 'application proxy' },
-                { option: option.d, text: 'stateful firewall*' }
+                { option: option.d, text: 'stateful firewall' }
             ],
             correct: [option.d],
             comment:
@@ -1239,7 +1239,7 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'traffic that is going from the private network to the DMZ*'
+                    text: 'traffic that is going from the private network to the DMZ'
                 },
                 {
                     option: option.b,
@@ -1276,11 +1276,11 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'Devices on the 192.168.10.0/24 network are not allowed to ping other devices on the 192.168.11.0 network.*'
+                    text: 'Devices on the 192.168.10.0/24 network are not allowed to ping other devices on the 192.168.11.0 network.'
                 },
                 {
                     option: option.e,
-                    text: 'A Telnet or SSH session is allowed from any device on the 192.168.10.0 into the router with this access list assigned.*'
+                    text: 'A Telnet or SSH session is allowed from any device on the 192.168.10.0 into the router with this access list assigned.'
                 }
             ],
             correct: [option.d, option.e],
@@ -1306,7 +1306,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'forwarding traffic from one zone to another*'
+                    text: 'forwarding traffic from one zone to another'
                 }
             ],
             correct: [option.d],
@@ -1321,7 +1321,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'Assign interfaces to zones.' },
                 {
                     option: option.b,
-                    text: 'Establish policies between zones.*'
+                    text: 'Establish policies between zones.'
                 },
                 { option: option.c, text: 'Identify subsets within zones.' },
                 {
@@ -1348,7 +1348,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.c,
-                    text: 'The two models cannot be implemented on a single interface.*'
+                    text: 'The two models cannot be implemented on a single interface.'
                 },
                 {
                     option: option.d,
@@ -1370,11 +1370,11 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.b,
-                    text: 'If neither interface is a zone member, then the action is to pass traffic.*'
+                    text: 'If neither interface is a zone member, then the action is to pass traffic.'
                 },
                 {
                     option: option.c,
-                    text: 'If both interfaces are members of the same zone, all traffic will be passed.*'
+                    text: 'If both interfaces are members of the same zone, all traffic will be passed.'
                 },
                 {
                     option: option.d,
@@ -1396,7 +1396,7 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'show interfaces' },
                 { option: option.b, text: 'show zones' },
-                { option: option.c, text: 'show running-config*' },
+                { option: option.c, text: 'show running-config' },
                 { option: option.d, text: 'show protocols' }
             ],
             correct: [option.c],
@@ -1411,7 +1411,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'multicast packet' },
                 { option: option.b, text: 'ICMP packet' },
                 { option: option.c, text: 'broadcast packet' },
-                { option: option.d, text: 'router-generated packet*' }
+                { option: option.d, text: 'router-generated packet' }
             ],
             correct: [option.d],
             comment:
@@ -1422,11 +1422,11 @@ const useQuestions = (): question[] => {
             question:
                 'When a Cisco IOS Zone-Based Policy Firewall is being configured, which two actions can be applied to a traffic class? (Choose two.)',
             answers: [
-                { option: option.a, text: 'drop*' },
+                { option: option.a, text: 'drop' },
                 { option: option.b, text: 'log' },
                 { option: option.c, text: 'forward' },
                 { option: option.d, text: 'hold' },
-                { option: option.e, text: 'inspect*' },
+                { option: option.e, text: 'inspect' },
                 { option: option.f, text: 'copy' }
             ],
             correct: [option.a, option.e],
@@ -1456,7 +1456,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.e,
-                    text: 'on all switch ports that connect to another switch that is not the root bridge*'
+                    text: 'on all switch ports that connect to another switch that is not the root bridge'
                 }
             ],
             correct: [option.e],
@@ -1468,7 +1468,7 @@ const useQuestions = (): question[] => {
             question:
                 'Two devices that are connected to the same switch need to be totally isolated from one another. Which Cisco switch security feature will provide this isolation?',
             answers: [
-                { option: option.a, text: 'PVLAN Edge*' },
+                { option: option.a, text: 'PVLAN Edge' },
                 { option: option.b, text: 'DTP' },
                 { option: option.c, text: 'SPAN' },
                 { option: option.d, text: 'BPDU guard' }
@@ -1484,7 +1484,7 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'DTP spoofing' },
                 { option: option.b, text: 'DHCP spoofing' },
-                { option: option.c, text: 'VLAN double-tagging*' },
+                { option: option.c, text: 'VLAN double-tagging' },
                 { option: option.d, text: 'DHCP starvation' }
             ],
             correct: [option.c],
@@ -1497,7 +1497,7 @@ const useQuestions = (): question[] => {
                 'What component of Cisco NAC is responsible for performing deep inspection of device security profiles?',
             answers: [
                 { option: option.a, text: 'Cisco NAC Profiler' },
-                { option: option.b, text: 'Cisco NAC Agent*' },
+                { option: option.b, text: 'Cisco NAC Agent' },
                 { option: option.c, text: 'Cisco NAC Manager' },
                 { option: option.d, text: 'Cisco NAC Server' }
             ],
@@ -1511,13 +1511,13 @@ const useQuestions = (): question[] => {
                 'Which three functions are provided under Cisco NAC framework solution? (Choose three.)',
             answers: [
                 { option: option.a, text: 'VPN connection' },
-                { option: option.b, text: 'AAA services*' },
+                { option: option.b, text: 'AAA services' },
                 { option: option.c, text: 'intrusion prevention' },
-                { option: option.d, text: 'scanning for policy compliance*' },
+                { option: option.d, text: 'scanning for policy compliance' },
                 { option: option.e, text: 'secure connection to servers' },
                 {
                     option: option.f,
-                    text: 'remediation for noncompliant devices*'
+                    text: 'remediation for noncompliant devices'
                 }
             ],
             correct: [option.b, option.d, option.f],
@@ -1529,7 +1529,7 @@ const useQuestions = (): question[] => {
             question:
                 'Which feature is part of the Antimalware Protection security solution?',
             answers: [
-                { option: option.a, text: 'file retrospection*' },
+                { option: option.a, text: 'file retrospection' },
                 {
                     option: option.b,
                     text: 'user authentication and authorization'
@@ -1549,7 +1549,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'STP' },
                 { option: option.b, text: 'ARP' },
                 { option: option.c, text: 'CDP' },
-                { option: option.d, text: 'DTP*' }
+                { option: option.d, text: 'DTP' }
             ],
             correct: [option.d],
             comment:
@@ -1563,7 +1563,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'DHCP spoofing' },
                 { option: option.b, text: 'CAM table attack' },
                 { option: option.c, text: 'IP address spoofing' },
-                { option: option.d, text: 'DHCP starvation*' }
+                { option: option.d, text: 'DHCP starvation' }
             ],
             correct: [option.d],
             comment:
@@ -1575,7 +1575,7 @@ const useQuestions = (): question[] => {
                 'What is the only type of port that an isolated port can forward traffic to on a private VLAN?',
             answers: [
                 { option: option.a, text: 'a community port' },
-                { option: option.b, text: 'a promiscuous port*' },
+                { option: option.b, text: 'a promiscuous port' },
                 { option: option.c, text: 'another isolated port' },
                 { option: option.d, text: 'any access port in the same PVLAN' }
             ],
@@ -1591,7 +1591,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'DHCP snooping' },
                 { option: option.b, text: 'Dynamic ARP Inspection' },
                 { option: option.c, text: 'IP source guard' },
-                { option: option.d, text: 'port security*' }
+                { option: option.d, text: 'port security' }
             ],
             correct: [option.d],
             comment:
@@ -1608,11 +1608,11 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.b,
-                    text: 'enforcing network security policy for hosts that connect to the network*'
+                    text: 'enforcing network security policy for hosts that connect to the network'
                 },
                 {
                     option: option.c,
-                    text: 'ensuring that only authenticated hosts can access the network*'
+                    text: 'ensuring that only authenticated hosts can access the network'
                 },
                 {
                     option: option.d,
@@ -1635,7 +1635,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'BDPU filter' },
                 { option: option.b, text: 'PortFast' },
                 { option: option.c, text: 'BPDU guard' },
-                { option: option.d, text: 'root guard*' }
+                { option: option.d, text: 'root guard' }
             ],
             correct: [option.d],
             comment:
@@ -1647,7 +1647,7 @@ const useQuestions = (): question[] => {
                 'Which security feature should be enabled in order to prevent an attacker from overflowing the MAC address table of a switch?',
             answers: [
                 { option: option.a, text: 'root guard' },
-                { option: option.b, text: 'port security*' },
+                { option: option.b, text: 'port security' },
                 { option: option.c, text: 'storm control' },
                 { option: option.d, text: 'BPDU filter' }
             ],
@@ -1662,7 +1662,7 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'The switch will forward all received frames to all other ports.*'
+                    text: 'The switch will forward all received frames to all other ports.'
                 },
                 {
                     option: option.b,
@@ -1686,7 +1686,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'port security' },
                 { option: option.b, text: 'BPDU Guard' },
                 { option: option.c, text: 'root guard' },
-                { option: option.d, text: 'DHCP snooping*' }
+                { option: option.d, text: 'DHCP snooping' }
             ],
             correct: [option.d],
             comment:
@@ -1698,7 +1698,7 @@ const useQuestions = (): question[] => {
                 'Which mitigation technique would prevent rogue servers from providing false IP configuration parameters to clients?',
             answers: [
                 { option: option.a, text: 'turning on DHCP snooping' },
-                { option: option.b, text: 'implementing port security*' },
+                { option: option.b, text: 'implementing port security' },
                 {
                     option: option.c,
                     text: 'implementing port-security on edge ports'
@@ -1716,11 +1716,11 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'Set the native VLAN to an unused VLAN.*'
+                    text: 'Set the native VLAN to an unused VLAN.'
                 },
-                { option: option.b, text: 'Disable DTP.*' },
+                { option: option.b, text: 'Disable DTP.' },
                 { option: option.c, text: 'Enable Source Guard.' },
-                { option: option.d, text: 'Enable trunking manually.*' },
+                { option: option.d, text: 'Enable trunking manually.' },
                 { option: option.e, text: 'Enable BPDU guard.' },
                 { option: option.f, text: 'Use private VLANs.' }
             ],
@@ -1735,10 +1735,10 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'MAC-address-to-IP-address bindings*'
+                    text: 'MAC-address-to-IP-address bindings'
                 },
                 { option: option.b, text: 'RARP' },
-                { option: option.c, text: 'ARP ACLs*' },
+                { option: option.c, text: 'ARP ACLs' },
                 { option: option.d, text: 'IP ACLs' },
                 { option: option.e, text: 'Source Guard' }
             ],
@@ -1753,7 +1753,7 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'Source Guard' },
                 { option: option.b, text: 'BPDU guard' },
-                { option: option.c, text: 'root guard*' },
+                { option: option.c, text: 'root guard' },
                 { option: option.d, text: 'loop guard' }
             ],
             correct: [option.c],
@@ -1771,7 +1771,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.b,
-                    text: 'by using a proxy autoconfiguration file in the end device*'
+                    text: 'by using a proxy autoconfiguration file in the end device'
                 },
                 {
                     option: option.c,
@@ -1801,7 +1801,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.c,
-                    text: 'preventing rogue switches from being added to the network*'
+                    text: 'preventing rogue switches from being added to the network'
                 },
                 { option: option.d, text: 'protecting against Layer 2 loops' }
             ],
@@ -1816,7 +1816,7 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'to define role-based user access and endpoint security policies*'
+                    text: 'to define role-based user access and endpoint security policies'
                 },
                 {
                     option: option.b,
@@ -1854,7 +1854,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'assessing and enforcing security policy compliance in the NAC environment*'
+                    text: 'assessing and enforcing security policy compliance in the NAC environment'
                 }
             ],
             correct: [option.d],
@@ -1872,7 +1872,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.b,
-                    text: 'It provides the ability for creation and reporting of guest accounts*'
+                    text: 'It provides the ability for creation and reporting of guest accounts'
                 },
                 {
                     option: option.c,
