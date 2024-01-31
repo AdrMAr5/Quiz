@@ -1899,7 +1899,7 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'crypto ipsec transform-set ESP-DES-SHA esp-aes-256 esp-sha-hmac*'
+                    text: 'crypto ipsec transform-set ESP-DES-SHA esp-aes-256 esp-sha-hmac'
                 },
                 {
                     option: option.b,
@@ -1924,11 +1924,11 @@ const useQuestions = (): question[] => {
                 'Which three ports must be open to verify that an IPsec VPN tunnel is operating properly? (Choose three.)',
             answers: [
                 { option: option.a, text: '168' },
-                { option: option.b, text: '50*' },
+                { option: option.b, text: '50' },
                 { option: option.c, text: '169' },
                 { option: option.d, text: '501' },
-                { option: option.e, text: '500*' },
-                { option: option.f, text: '51*' }
+                { option: option.e, text: '500' },
+                { option: option.f, text: '51' }
             ],
             correct: [option.b, option.e, option.f],
             comment:
@@ -1941,10 +1941,10 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'HTTPS' },
                 { option: option.b, text: 'SSH' },
-                { option: option.c, text: 'AH*' },
-                { option: option.d, text: 'ISAKMP*' },
+                { option: option.c, text: 'AH' },
+                { option: option.d, text: 'ISAKMP' },
                 { option: option.e, text: 'NTP' },
-                { option: option.f, text: 'ESP*' }
+                { option: option.f, text: 'ESP' }
             ],
             correct: [option.c, option.d, option.f],
             comment:
@@ -1961,7 +1961,7 @@ const useQuestions = (): question[] => {
                 },
                 { option: option.b, text: 'only during Phase 2' },
                 { option: option.c, text: 'only during Phase 1' },
-                { option: option.d, text: 'during both Phase 1 and 2*' }
+                { option: option.d, text: 'during both Phase 1 and 2' }
             ],
             correct: [option.d],
             comment:
@@ -1986,7 +1986,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'when a PC with Cisco IP Communicator installed connects to a Cisco switch*'
+                    text: 'when a PC with Cisco IP Communicator installed connects to a Cisco switch'
                 }
             ],
             correct: [option.d],
@@ -2012,11 +2012,11 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'IPsec is a framework of open standards that relies on existing algorithms.*'
+                    text: 'IPsec is a framework of open standards that relies on existing algorithms.'
                 },
                 {
                     option: option.e,
-                    text: 'IPsec works at the network layer and operates over all Layer 2 protocols.*'
+                    text: 'IPsec works at the network layer and operates over all Layer 2 protocols.'
                 },
                 {
                     option: option.f,
@@ -2033,7 +2033,7 @@ const useQuestions = (): question[] => {
                 'Which action do IPsec peers take during the IKE Phase 2 exchange?',
             answers: [
                 { option: option.a, text: 'exchange of DH keys' },
-                { option: option.b, text: 'negotiation of IPsec policy*' },
+                { option: option.b, text: 'negotiation of IPsec policy' },
                 { option: option.c, text: 'negotiation of IKE policy sets' },
                 { option: option.d, text: 'verification of peer identity' }
             ],
@@ -2060,7 +2060,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'The longer the key, the more key possibilities exist.*'
+                    text: 'The longer the key, the more key possibilities exist.'
                 }
             ],
             correct: [option.d],
@@ -2086,7 +2086,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'When multiple combinations of IPsec protection are being chosen, multiple crypto ACLs can define different traffic types.*'
+                    text: 'When multiple combinations of IPsec protection are being chosen, multiple crypto ACLs can define different traffic types.'
                 }
             ],
             correct: [option.d],
@@ -2104,7 +2104,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.b,
-                    text: 'to define the encryption and integrity algorithms that are used to build the IPsec tunnel*'
+                    text: 'to define the encryption and integrity algorithms that are used to build the IPsec tunnel'
                 },
                 {
                     option: option.c,
@@ -2124,7 +2124,7 @@ const useQuestions = (): question[] => {
             question:
                 'Which technique is necessary to ensure a private transfer of data using a VPN?',
             answers: [
-                { option: option.a, text: 'encryption*' },
+                { option: option.a, text: 'encryption' },
                 { option: option.b, text: 'authorization' },
                 { option: option.c, text: 'virtualization' },
                 { option: option.d, text: 'scalability' }
@@ -2143,7 +2143,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.b,
-                    text: 'VPNs use virtual connections to create a private network through a public network.*'
+                    text: 'VPNs use virtual connections to create a private network through a public network.'
                 },
                 {
                     option: option.c,
@@ -2164,7 +2164,7 @@ const useQuestions = (): question[] => {
                 'Which protocol provides authentication, integrity, and confidentiality services and is a type of VPN?',
             answers: [
                 { option: option.a, text: 'ESP' },
-                { option: option.b, text: 'IPsec*' },
+                { option: option.b, text: 'IPsec' },
                 { option: option.c, text: 'MD5' },
                 { option: option.d, text: 'AES' }
             ],
@@ -2179,13 +2179,13 @@ const useQuestions = (): question[] => {
             answers: [
                 {
                     option: option.a,
-                    text: 'AH provides integrity and authentication.*'
+                    text: 'AH provides integrity and authentication.'
                 },
                 {
                     option: option.b,
-                    text: 'ESP provides encryption, authentication, and integrity.*'
+                    text: 'ESP provides encryption, authentication, and integrity.'
                 },
-                { option: option.c, text: 'AH uses IP protocol 51.*' },
+                { option: option.c, text: 'AH uses IP protocol 51.' },
                 {
                     option: option.d,
                     text: 'AH provides encryption and integrity.'
@@ -2223,7 +2223,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.e,
-                    text: 'IPsec is a framework of open standards that relies on existing algorithms.*'
+                    text: 'IPsec is a framework of open standards that relies on existing algorithms.'
                 }
             ],
             correct: [option.e],
@@ -2235,10 +2235,10 @@ const useQuestions = (): question[] => {
             question:
                 'Which two IPsec protocols are used to provide data integrity?',
             answers: [
-                { option: option.a, text: 'SHA*' },
+                { option: option.a, text: 'SHA' },
                 { option: option.b, text: 'AES' },
                 { option: option.c, text: 'DH' },
-                { option: option.d, text: 'MD5*' },
+                { option: option.d, text: 'MD5' },
                 { option: option.e, text: 'RSA' }
             ],
             correct: [option.a, option.d],
@@ -2253,7 +2253,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'provides authentication' },
                 {
                     option: option.b,
-                    text: 'allows peers to exchange shared keys*'
+                    text: 'allows peers to exchange shared keys'
                 },
                 { option: option.c, text: 'guarantees message integrity' },
                 { option: option.d, text: 'provides strong data encryption' }
@@ -2269,7 +2269,7 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'security associations' },
                 { option: option.b, text: 'hashing algorithm' },
-                { option: option.c, text: 'access list*' },
+                { option: option.c, text: 'access list' },
                 { option: option.d, text: 'transform set' }
             ],
             correct: [option.c],
@@ -2283,9 +2283,9 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: '501' },
                 { option: option.b, text: '500' },
-                { option: option.c, text: '51*' },
+                { option: option.c, text: '51' },
                 { option: option.d, text: '168' },
-                { option: option.e, text: '50*' },
+                { option: option.e, text: '50' },
                 { option: option.f, text: '169' }
             ],
             correct: [option.c, option.e],
@@ -2302,7 +2302,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.b,
-                    text: 'permits VPN to work when NAT is being used on one or both ends of the VPN*'
+                    text: 'permits VPN to work when NAT is being used on one or both ends of the VPN'
                 },
                 { option: option.c, text: 'upgrades NAT for IPv4' },
                 {
@@ -2322,7 +2322,7 @@ const useQuestions = (): question[] => {
                 { option: option.a, text: 'GRE' },
                 { option: option.b, text: 'split tunneling' },
                 { option: option.c, text: 'MPLS' },
-                { option: option.d, text: 'hairpinning*' }
+                { option: option.d, text: 'hairpinning' }
             ],
             correct: [option.d],
             comment:
@@ -2347,7 +2347,7 @@ const useQuestions = (): question[] => {
                 },
                 {
                     option: option.d,
-                    text: 'The VPN connection is initiated by the remote user.*'
+                    text: 'The VPN connection is initiated by the remote user.'
                 }
             ],
             correct: [option.d],
@@ -2361,7 +2361,7 @@ const useQuestions = (): question[] => {
             answers: [
                 { option: option.a, text: 'DMVPN' },
                 { option: option.b, text: 'GRE' },
-                { option: option.c, text: 'GETVPN*' },
+                { option: option.c, text: 'GETVPN' },
                 { option: option.d, text: 'MPLS' }
             ],
             correct: [option.c],
