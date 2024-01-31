@@ -1235,7 +1235,7 @@ const useQuestions = (): question[] => {
         {
             chapter: 4,
             question:
-                'A company is deploying a new network design in which the border router has three interfaces...',
+                'A company is deploying a new network design in which the border router has three interfaces. Interface Serial0/0/0 connects to the ISP, GigabitEthernet0/0 connects to the DMZ, and GigabitEthernet/01 connects to the internal private network. Which type of traffic would receive the least amount of inspection (have the most freedom of travel)?',
             answers: [
                 {
                     option: option.a,
@@ -1260,7 +1260,12 @@ const useQuestions = (): question[] => {
         },
         {
             chapter: 4,
-            question: 'Consider the following access list...',
+            question:
+                'Consider the following access list.\n' +
+                'access list.access-list 100 permit ip host 192.168.10.1 any\n' +
+                'access-list 100 deny icmp 192.168.10.0 0.0.0.255 any echo\n' +
+                'access-list 100 permit ip any any\n' +
+                'Which two actions are taken if the access list is placed inbound on a router Gigabit Ethernet port that has the IP address 192.168.10.254 assigned? (Choose two.)',
             answers: [
                 {
                     option: option.a,
