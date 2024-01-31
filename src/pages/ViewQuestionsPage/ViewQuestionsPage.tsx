@@ -1,28 +1,28 @@
 import PageLayout from '../../components/PageLayout';
 import PageHeader from '../../components/PageHeader';
-import useQuestions from './hooks/useQuestions';
+import useQuestions, { answer } from './hooks/useQuestions';
 import {
     Button,
     Card,
     CardContent,
     CardHeader,
+    Checkbox,
+    FormControlLabel,
     Grid,
     List,
-    ListItem,
-    ListItemText,
     MenuItem,
     Select,
     SelectChangeEvent
 } from '@mui/material';
 import { useState } from 'react';
 import Answer from '../QuizPage/Answer';
-import SelectInput from '@mui/material/Select/SelectInput';
 
 const ViewQuestionsPage = () => {
     const questions = useQuestions();
     const [chapter, setChapter] = useState(2);
     const [showCorrect, setShowCorrect] = useState(false);
     const [showComment, setShowComment] = useState(false);
+    const [shuffleAnswers, setShuffleAnswers] = useState(false);
 
     const count2 = questions.filter((obj) => obj.chapter === 2).length;
     const count3 = questions.filter((obj) => obj.chapter === 3).length;
@@ -44,6 +44,23 @@ const ViewQuestionsPage = () => {
     const handleChange = (event: SelectChangeEvent) => {
         setChapter(Number(event.target.value));
     };
+    const shuffle = (array: answer[]) => {
+        let currentIndex = array.length,
+            randomIndex;
+        // While there remain elements to shuffle.
+        while (currentIndex > 0) {
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex],
+                array[currentIndex]
+            ];
+        }
+
+        return array;
+    };
     return (
         <PageLayout>
             <>
@@ -55,14 +72,41 @@ const ViewQuestionsPage = () => {
                     <MenuItem value={6}>6</MenuItem>
                     <MenuItem value={8}>8</MenuItem>
                 </Select>
-                <Button onClick={() => setShowCorrect(!showCorrect)}>
-                    pokaż poprawne
-                </Button>
-                <Button onClick={() => setShowComment(!showComment)}>
-                    pokaż wyjaśnienia
-                </Button>
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            onChange={() => setShowCorrect(!showCorrect)}
+                            checked={showCorrect}
+                        />
+                    }
+                    label="pokaż poprawne"
+                />
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            onChange={() => setShowComment(!showComment)}
+                            checked={showComment}
+                        />
+                    }
+                    label="pokaż wyjaśnienia"
+                />
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            onChange={() => setShuffleAnswers(!shuffleAnswers)}
+                            checked={shuffleAnswers}
+                        />
+                    }
+                    label="mieszaj odpowiedzi"
+                />
+
                 <Grid container rowGap={4} columns={1} maxWidth="60%">
                     {questions.map((question) => {
+                        {
+                            shuffleAnswers
+                                ? shuffle(question.answers)
+                                : undefined;
+                        }
                         return question.chapter === chapter ? (
                             <Grid xs={1}>
                                 <Card>

@@ -6,7 +6,7 @@ export enum option {
     e = 'e',
     f = 'f'
 }
-type answer = {
+export type answer = {
     option: option;
     text: string;
 };
