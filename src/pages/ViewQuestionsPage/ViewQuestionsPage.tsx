@@ -28,6 +28,7 @@ const ViewQuestionsPage = () => {
     const count3 = questions.filter((obj) => obj.chapter === 3).length;
     const count4 = questions.filter((obj) => obj.chapter === 4).length;
     const count6 = questions.filter((obj) => obj.chapter === 6).length;
+    const count8 = questions.filter((obj) => obj.chapter === 8).length;
     console.log(
         ', 2:',
         count2,
@@ -36,7 +37,9 @@ const ViewQuestionsPage = () => {
         ', 4: ',
         count4,
         ', 6: ',
-        count6
+        count6,
+        ', 8: ',
+        count8
     );
     const handleChange = (event: SelectChangeEvent) => {
         setChapter(Number(event.target.value));
@@ -50,6 +53,7 @@ const ViewQuestionsPage = () => {
                     <MenuItem value={3}>3</MenuItem>
                     <MenuItem value={4}>4</MenuItem>
                     <MenuItem value={6}>6</MenuItem>
+                    <MenuItem value={8}>8</MenuItem>
                 </Select>
                 <Button onClick={() => setShowCorrect(!showCorrect)}>
                     pokaż poprawne

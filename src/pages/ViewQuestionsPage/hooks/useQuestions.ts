@@ -1891,6 +1891,482 @@ const useQuestions = (): question[] => {
             correct: [option.b],
             comment:
                 'Cisco NAC is used in the Cisco Borderless Network Architecture to authenticate users and ensure that user devices are compliant with security policies. The Cisco NAC Guest Server manages guest network access and the ability to create guest accounts.'
+        },
+
+        {
+            chapter: 8,
+            question: 'Which transform set provides the best protection?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'crypto ipsec transform-set ESP-DES-SHA esp-aes-256 esp-sha-hmac*'
+                },
+                {
+                    option: option.b,
+                    text: 'crypto ipsec transform-set ESP-DES-SHA esp-3des esp-sha-hmac'
+                },
+                {
+                    option: option.c,
+                    text: 'crypto ipsec transform-set ESP-DES-SHA esp-des esp-sha-hmac'
+                },
+                {
+                    option: option.d,
+                    text: 'crypto ipsec transform-set ESP-DES-SHA esp-aes esp-des esp-sha-hmac'
+                }
+            ],
+            correct: [option.a],
+            comment:
+                'DES uses 56-bit keys. 3DES uses 56-bit keys, but encrypts three times. AES uses 128-bit keys. AES-256 uses 256-bit keys and is the strongest.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which three ports must be open to verify that an IPsec VPN tunnel is operating properly? (Choose three.)',
+            answers: [
+                { option: option.a, text: '168' },
+                { option: option.b, text: '50*' },
+                { option: option.c, text: '169' },
+                { option: option.d, text: '501' },
+                { option: option.e, text: '500*' },
+                { option: option.f, text: '51*' }
+            ],
+            correct: [option.b, option.e, option.f],
+            comment:
+                'IPsec VPNs use the following ports: IP protocol 50 (ESP), UDP 500 (ISAKMP), and IP protocol 51 (AH).'
+        },
+        {
+            chapter: 8,
+            question:
+                'What three protocols must be permitted through the company firewall for establishment of IPsec site-to-site VPNs? (Choose three.)',
+            answers: [
+                { option: option.a, text: 'HTTPS' },
+                { option: option.b, text: 'SSH' },
+                { option: option.c, text: 'AH*' },
+                { option: option.d, text: 'ISAKMP*' },
+                { option: option.e, text: 'NTP' },
+                { option: option.f, text: 'ESP*' }
+            ],
+            correct: [option.c, option.d, option.f],
+            comment:
+                'ESP, AH, and ISAKMP must all be permitted through the perimeter routers and firewalls in order for IPsec site-to-site VPNs to be established. NTP and HTTPS are application protocols and are not required for IPsec.'
+        },
+        {
+            chapter: 8,
+            question:
+                'When is a security association (SA) created if an IPsec VPN tunnel is used to connect between two sites?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'after the tunnel is created, but before traffic is sent'
+                },
+                { option: option.b, text: 'only during Phase 2' },
+                { option: option.c, text: 'only during Phase 1' },
+                { option: option.d, text: 'during both Phase 1 and 2*' }
+            ],
+            correct: [option.d],
+            comment:
+                'An IPsec VPN connection creates two SAs: (1) at the completion of the IKE Phase 1 once the peers negotiate the IKE SA policy, and (2) at the end of IKE Phase 2 after the transform sets are negotiated.'
+        },
+        {
+            chapter: 8,
+            question:
+                'In which situation would the Cisco Discovery Protocol be disabled?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'when a Cisco VoIP phone attaches to a Cisco switch'
+                },
+                {
+                    option: option.b,
+                    text: 'when a Cisco switch connects to another Cisco switch'
+                },
+                {
+                    option: option.c,
+                    text: 'when a Cisco switch connects to a Cisco router'
+                },
+                {
+                    option: option.d,
+                    text: 'when a PC with Cisco IP Communicator installed connects to a Cisco switch*'
+                }
+            ],
+            correct: [option.d],
+            comment:
+                'Cisco Discovery Protocol should be disabled on ports that do not connect to other Cisco devices. Even though the PC has a Cisco software product installed, the port to which the PC connects should have Cisco Discovery Protocol disabled because of the network information that can be derived from capturing Cisco Discovery Protocol messages.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which two statements accurately describe characteristics of IPsec? (Choose two.)',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'IPsec works at the transport layer and protects data at the network layer.'
+                },
+                {
+                    option: option.b,
+                    text: 'IPsec is a framework of proprietary standards that depend on Cisco specific algorithms.'
+                },
+                {
+                    option: option.c,
+                    text: 'IPsec is a framework of standards developed by Cisco that relies on OSI algorithms.'
+                },
+                {
+                    option: option.d,
+                    text: 'IPsec is a framework of open standards that relies on existing algorithms.*'
+                },
+                {
+                    option: option.e,
+                    text: 'IPsec works at the network layer and operates over all Layer 2 protocols.*'
+                },
+                {
+                    option: option.f,
+                    text: 'IPsec works at the application layer and protects all application data.'
+                }
+            ],
+            correct: [option.d, option.e],
+            comment:
+                'IPsec can secure a path between two network devices. IPsec can provide confidentiality, integrity, authentication, and secure key exchange. It operates at the network layer and is not tied to specific Cisco algorithms.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which action do IPsec peers take during the IKE Phase 2 exchange?',
+            answers: [
+                { option: option.a, text: 'exchange of DH keys' },
+                { option: option.b, text: 'negotiation of IPsec policy*' },
+                { option: option.c, text: 'negotiation of IKE policy sets' },
+                { option: option.d, text: 'verification of peer identity' }
+            ],
+            correct: [option.b],
+            comment:
+                'The IKE protocol executes in two phases. During Phase 1, the two sides negotiate IKE policy sets, authenticate each other, and set up a secure channel. During the second phase, IKE negotiates security associations between the peers.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which statement describes the effect of key length in deterring an attacker from hacking through an encryption key?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'The length of a key does not affect the degree of security.'
+                },
+                {
+                    option: option.b,
+                    text: 'The shorter the key, the harder it is to break.'
+                },
+                {
+                    option: option.c,
+                    text: 'The length of a key will not vary between encryption algorithms.'
+                },
+                {
+                    option: option.d,
+                    text: 'The longer the key, the more key possibilities exist.*'
+                }
+            ],
+            correct: [option.d],
+            comment:
+                'While preventing brute-force attacks and other forced decryption concerns, the longer the key length, the harder it is to break. A longer key provides more possibilities and enhances security.'
+        },
+        {
+            chapter: 8,
+            question:
+                'What is the purpose of configuring multiple crypto ACLs when building a VPN connection between remote sites?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'By applying the ACL on a public interface, multiple crypto ACLs can be built to prevent public users from connecting to the VPN-enabled router.'
+                },
+                {
+                    option: option.b,
+                    text: 'Multiple crypto ACLs can define multiple remote peers for connecting with a VPN-enabled router across the Internet or network.'
+                },
+                {
+                    option: option.c,
+                    text: 'Multiple crypto ACLs can be configured to deny specific network traffic from crossing a VPN.'
+                },
+                {
+                    option: option.d,
+                    text: 'When multiple combinations of IPsec protection are being chosen, multiple crypto ACLs can define different traffic types.*'
+                }
+            ],
+            correct: [option.d],
+            comment:
+                'Crypto ACLs define "interesting traffic" for building a VPN. Multiple crypto ACLs are used to define different traffic types and apply different IPsec protection to each type.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Consider the following configuration on a Cisco ASA: crypto ipsec transform-set ESP-DES-SHA esp-des esp-sha-hmac. What is the purpose of this command?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'to define the ISAKMP parameters that are used to establish the tunnel'
+                },
+                {
+                    option: option.b,
+                    text: 'to define the encryption and integrity algorithms that are used to build the IPsec tunnel*'
+                },
+                {
+                    option: option.c,
+                    text: 'to define what traffic is allowed through and protected by the tunnel'
+                },
+                {
+                    option: option.d,
+                    text: 'to define only the allowed encryption algorithms'
+                }
+            ],
+            correct: [option.b],
+            comment:
+                'The transform set in an IPsec configuration defines the encryption and authentication algorithms used to build the IPsec tunnel. In this case, ESP-DES-SHA specifies the use of DES for encryption and SHA-HMAC for authentication.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which technique is necessary to ensure a private transfer of data using a VPN?',
+            answers: [
+                { option: option.a, text: 'encryption*' },
+                { option: option.b, text: 'authorization' },
+                { option: option.c, text: 'virtualization' },
+                { option: option.d, text: 'scalability' }
+            ],
+            correct: [option.a],
+            comment:
+                'Confidential and secure transfers of data with VPNs require data encryption.'
+        },
+        {
+            chapter: 8,
+            question: 'Which statement describes a VPN?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'VPNs use open source virtualization software to create the tunnel through the Internet.'
+                },
+                {
+                    option: option.b,
+                    text: 'VPNs use virtual connections to create a private network through a public network.*'
+                },
+                {
+                    option: option.c,
+                    text: 'VPNs use dedicated physical connections to transfer data between remote users.'
+                },
+                {
+                    option: option.d,
+                    text: 'VPNs use logical connections to create public networks through the Internet.'
+                }
+            ],
+            correct: [option.b],
+            comment:
+                'VPNs use virtual connections (tunnels) to create a private network over a public network, providing secure communication.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which protocol provides authentication, integrity, and confidentiality services and is a type of VPN?',
+            answers: [
+                { option: option.a, text: 'ESP' },
+                { option: option.b, text: 'IPsec*' },
+                { option: option.c, text: 'MD5' },
+                { option: option.d, text: 'AES' }
+            ],
+            correct: [option.b],
+            comment:
+                'IPsec services allow for authentication, integrity, access control, and confidentiality. IPsec is commonly used to implement VPNs.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which three statements describe the IPsec protocol framework? (Choose three.)',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'AH provides integrity and authentication.*'
+                },
+                {
+                    option: option.b,
+                    text: 'ESP provides encryption, authentication, and integrity.*'
+                },
+                { option: option.c, text: 'AH uses IP protocol 51.*' },
+                {
+                    option: option.d,
+                    text: 'AH provides encryption and integrity.'
+                },
+                { option: option.e, text: 'ESP uses UDP protocol 50.' },
+                {
+                    option: option.f,
+                    text: 'ESP requires both authentication and encryption.'
+                }
+            ],
+            correct: [option.a, option.b, option.c],
+            comment:
+                'The IPsec framework includes Authentication Header (AH) and Encapsulating Security Payload (ESP). AH provides integrity and authentication, while ESP provides encryption, authentication, and integrity. AH uses IP protocol 51, and ESP uses UDP protocol 50.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which statement accurately describes a characteristic of IPsec?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'IPsec works at the application layer and protects all application data.'
+                },
+                {
+                    option: option.b,
+                    text: 'IPsec is a framework of standards developed by Cisco that relies on OSI algorithms.'
+                },
+                {
+                    option: option.c,
+                    text: 'IPsec is a framework of proprietary standards that depend on Cisco specific algorithms.'
+                },
+                {
+                    option: option.d,
+                    text: 'IPsec works at the transport layer and protects data at the network layer.'
+                },
+                {
+                    option: option.e,
+                    text: 'IPsec is a framework of open standards that relies on existing algorithms.*'
+                }
+            ],
+            correct: [option.e],
+            comment:
+                'IPsec is a framework of open standards that relies on existing algorithms, providing security functions at the network layer.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which two IPsec protocols are used to provide data integrity?',
+            answers: [
+                { option: option.a, text: 'SHA*' },
+                { option: option.b, text: 'AES' },
+                { option: option.c, text: 'DH' },
+                { option: option.d, text: 'MD5*' },
+                { option: option.e, text: 'RSA' }
+            ],
+            correct: [option.a, option.d],
+            comment:
+                'MD5 and SHA are two IPsec protocols used to ensure data integrity. SHA (Secure Hash Algorithm) provides data integrity by creating a hash, while MD5 (Message Digest Algorithm) is another hash function used for integrity verification.'
+        },
+        {
+            chapter: 8,
+            question:
+                'What is the function of the Diffie-Hellman algorithm within the IPsec framework?',
+            answers: [
+                { option: option.a, text: 'provides authentication' },
+                {
+                    option: option.b,
+                    text: 'allows peers to exchange shared keys*'
+                },
+                { option: option.c, text: 'guarantees message integrity' },
+                { option: option.d, text: 'provides strong data encryption' }
+            ],
+            correct: [option.b],
+            comment:
+                'The Diffie-Hellman algorithm in the IPsec framework is used for key exchange. It allows two IPsec peers to establish a shared secret key over an insecure channel.'
+        },
+        {
+            chapter: 8,
+            question:
+                'What is needed to define interesting traffic in the creation of an IPsec tunnel?',
+            answers: [
+                { option: option.a, text: 'security associations' },
+                { option: option.b, text: 'hashing algorithm' },
+                { option: option.c, text: 'access list*' },
+                { option: option.d, text: 'transform set' }
+            ],
+            correct: [option.c],
+            comment:
+                'In order to bring up an IPsec tunnel, an access list must be configured with a permit statement that will identify interesting traffic.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which two protocols must be allowed for an IPsec VPN tunnel to operate properly? (Choose two.)',
+            answers: [
+                { option: option.a, text: '501' },
+                { option: option.b, text: '500' },
+                { option: option.c, text: '51*' },
+                { option: option.d, text: '168' },
+                { option: option.e, text: '50*' },
+                { option: option.f, text: '169' }
+            ],
+            correct: [option.c, option.e],
+            comment:
+                'ESP uses protocol 50, and AH uses protocol 51. ISAKMP uses UDP port 500 for negotiation.'
+        },
+        {
+            chapter: 8,
+            question: 'What is the purpose of NAT-T?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'enables NAT for PC-based VPN clients'
+                },
+                {
+                    option: option.b,
+                    text: 'permits VPN to work when NAT is being used on one or both ends of the VPN*'
+                },
+                { option: option.c, text: 'upgrades NAT for IPv4' },
+                {
+                    option: option.d,
+                    text: 'allows NAT to be used for IPv6 addresses'
+                }
+            ],
+            correct: [option.b],
+            comment:
+                'NAT-T (Network Address Translation Transparency) permits VPN to work when NAT is being used on one or both ends of the VPN.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which term describes a situation where VPN traffic that is received by an interface is routed back out that same interface?',
+            answers: [
+                { option: option.a, text: 'GRE' },
+                { option: option.b, text: 'split tunneling' },
+                { option: option.c, text: 'MPLS' },
+                { option: option.d, text: 'hairpinning*' }
+            ],
+            correct: [option.d],
+            comment:
+                'Hairpinning allows VPN traffic that is received on a single interface to be routed back out that same interface.'
+        },
+        {
+            chapter: 8,
+            question:
+                'What is an important characteristic of remote-access VPNs?',
+            answers: [
+                {
+                    option: option.a,
+                    text: 'The VPN configuration is identical between the remote devices.'
+                },
+                {
+                    option: option.b,
+                    text: 'Internal hosts have no knowledge of the VPN.'
+                },
+                {
+                    option: option.c,
+                    text: 'Information required to establish the VPN must remain static.'
+                },
+                {
+                    option: option.d,
+                    text: 'The VPN connection is initiated by the remote user.*'
+                }
+            ],
+            correct: [option.d],
+            comment:
+                'With remote-access VPNs, the remote user initiates the VPN connection, and the VPN configuration is not necessarily identical between remote devices.'
+        },
+        {
+            chapter: 8,
+            question:
+                'Which type of site-to-site VPN uses trusted group members to eliminate point-to-point IPsec tunnels between the members of a group?',
+            answers: [
+                { option: option.a, text: 'DMVPN' },
+                { option: option.b, text: 'GRE' },
+                { option: option.c, text: 'GETVPN*' },
+                { option: option.d, text: 'MPLS' }
+            ],
+            correct: [option.c],
+            comment:
+                'Group Encrypted Transport VPN (GETVPN) uses a trusted group to eliminate point-to-point tunnels and their associated overlay routing. GETVPN is often described as “tunnel-less.” Dynamic Multipoint VPN (DMVPN) enables auto-provisioning of site-to-site IPsec VPNs using a combination of three Cisco IOS features: NHRP, GRE, and IPsec VPNs. Generic Routing Encapsulation (GRE) is a tunneling protocol developed by Cisco that encapsulates multiprotocol traffic between remote Cisco routers, but does not encrypt data. An MPLS VPN consists of a set of sites that are interconnected by means of an MPLS provider core network.'
         }
     ];
 };
